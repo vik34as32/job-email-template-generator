@@ -23,6 +23,7 @@ export const FieldEditor: React.FC<FieldEditorProps> = ({
   onChange,
 }) => {
   const handleFieldChange = (key: string, value: string | string[]) => {
+    console.log(key,value)
     onChange({
       ...values,
       [key]: value,

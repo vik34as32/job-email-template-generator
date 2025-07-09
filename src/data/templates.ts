@@ -40,20 +40,28 @@ export const defaultTemplates: Template[] = [
   {
     id: "email-template",
     name: "Professional Email",
-    content: `Subject: {{subject}}
+    content: `Subject:  Application for {{subject}} Position
 
 Dear {{recipient}},
 
-I hope this email finds you well. I am reaching out regarding position for {{jobPosition}} at {{companyName}}. With over 3 years of experience in {{backendTechnologies}}  {{frontendTechnology}}, I believe I can contribute effectively to your team. 
+I hope this email finds you well.
 
-Please find my attached resume for your reference. I’d be glad to connect for further discussion.
+I am writing to express my interest in the {{jobPosition}}  position at {{companyName}}. With over {{experience}} years of hands-on experience in {{frontendTechnology}} {{backendTechnologies}},  I have built a strong foundation in developing responsive, high-performance, and user-friendly web applications.. 
+
+Throughout my career, I have worked on multiple full-stack projects, implemented component-based architecture, optimized code for performance, and collaborated with cross-functional teams in Agile environments. I am confident that my technical skills and dedication make me a strong fit for your development team.
+
+Please find my resume attached for your review. I would appreciate the opportunity to further discuss how my background aligns with your team's goals.
+
+
+Looking forward to hearing from you.
 
 {{message}}
 
 Best regards,
 {{senderName}}
 {{email}}
-{{phone}}`,
+{{phone}}
+{{linkedIn}}`,
     fields: [
       {
         key: "subject",
@@ -72,6 +80,13 @@ Best regards,
       {
         key: "jobPosition",
         label: "Postion Applying",
+        type: "text",
+        required: true,
+        placeholder: "Postion Applying",
+      },
+       {
+        key: "experience",
+        label: "Experience",
         type: "text",
         required: true,
         placeholder: "Postion Applying",
@@ -129,51 +144,13 @@ Best regards,
         type: "text",
         placeholder: "+1 (555) 123-4567",
       },
+      {
+  key: "linkedIn",
+  label: "LinkedIn",
+  type: "text",
+  placeholder: "https://www.linkedin.com/in/your-profile/",
+  required: false
+}
     ],
   },
-  //   {
-  //     id: 'resume-summary',
-  //     name: 'Resume Summary',
-  //     content: `{{name}}
-  // {{title}} | {{location}}
-  // {{email}} | {{phone}} | {{linkedin}}
-
-  // PROFESSIONAL SUMMARY
-  // {{summary}}
-
-  // CORE COMPETENCIES
-  // {{#skills}}
-  // • {{.}}
-  // {{/skills}}
-
-  // PROFESSIONAL EXPERIENCE
-  // {{#experience}}
-  // {{position}} at {{company}} ({{duration}})
-  // {{description}}
-
-  // {{/experience}}
-
-  // EDUCATION
-  // {{education}}
-
-  // {{#certifications}}
-  // CERTIFICATIONS
-  // {{#.}}
-  // • {{.}}
-  // {{/.}}
-  // {{/certifications}}`,
-  //     fields: [
-  //       { key: 'name', label: 'Full Name', type: 'text', required: true, placeholder: 'John Smith' },
-  //       { key: 'title', label: 'Professional Title', type: 'text', required: true, placeholder: 'Senior Software Engineer' },
-  //       { key: 'location', label: 'Location', type: 'text', placeholder: 'New York, NY' },
-  //       { key: 'email', label: 'Email', type: 'text', required: true, placeholder: 'john.smith@email.com' },
-  //       { key: 'phone', label: 'Phone', type: 'text', placeholder: '+1 (555) 123-4567' },
-  //       { key: 'linkedin', label: 'LinkedIn', type: 'text', placeholder: 'linkedin.com/in/johnsmith' },
-  //       { key: 'summary', label: 'Professional Summary', type: 'textarea', required: true, placeholder: 'Experienced software engineer with 8+ years...' },
-  //       { key: 'skills', label: 'Skills', type: 'array', placeholder: 'JavaScript, Python, React, AWS' },
-  //       { key: 'experience', label: 'Work Experience', type: 'textarea', placeholder: 'Senior Developer at Tech Corp (2020-Present)\nLed development of...' },
-  //       { key: 'education', label: 'Education', type: 'text', placeholder: 'Bachelor of Science in Computer Science, University of Technology' },
-  //       { key: 'certifications', label: 'Certifications', type: 'array', placeholder: 'AWS Certified Solutions Architect, Google Cloud Professional' }
-  //     ]
-  //   }
 ];
